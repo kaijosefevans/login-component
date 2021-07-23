@@ -1,0 +1,138 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* NAV BAR */
+
+.nav-bar {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 220px 100px 1fr 100px;
+  grid-template-areas: "title creator . login-button";
+  background: #181818;
+  color: white;
+}
+
+
+#title {
+  display: flex;
+  align-self: flex-start;
+  padding-left: 2px;
+  grid-area: title;
+  text-align: center;
+  font-weight: 800;
+  font-size: large;
+}
+
+#title:hover {
+  color: #909090;
+  cursor: pointer;
+}
+
+#creator {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  grid-area: creator;
+  text-align: center;
+}
+
+.login {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  /* justify-content: center; */
+  grid-area: login-button;
+  padding-right: 10px;
+}
+
+#login-button {
+  display: flex;
+  padding: 10px;
+  font-size: 18px;
+  font-weight:lighter;
+  background-color: transparent;
+  color: white;
+  border-radius: 10%;
+  border: 1px solid white;
+}
+
+#login-button:hover {
+  background-color: #909090;
+  cursor: pointer;
+}
+
+/* CONTENT (HOME PAGE BODY) */
+
+.content {
+  margin: 0;
+  padding: 10px;
+  background-color: #303030;
+  color: white;
+  line-height: 1.5em;
+}
+
+.login-container {
+  height: 84vh;
+}
+
+/* LOGIN */
+
+.error {
+  color: red;
+
+}
+
+/* FOOTER */
+
+.footer {
+  grid-area: title;
+  text-align: center;
+  font-weight: 800;
+  font-size: large;
+  color: white;
+  background: #181818;
+  padding: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 50px;
+    grid-template-areas: "title creator . login-button";
+  }
+
+  #creator {
+    display: none;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .nav-bar {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 200px 1fr 50px;
+    grid-template-areas: "title creator . login-button";
+  }
+
+  #creator {
+    display: none;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
